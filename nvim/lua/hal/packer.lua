@@ -41,4 +41,6 @@ return require('packer').startup(function(use)
       }
   }
 
+  use('bling/vim-bufferline')
+
 end)
