@@ -139,11 +139,6 @@ _G.packer_plugins = {
     path = "/home/hal/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
-  ["vim-bufferline"] = {
-    loaded = true,
-    path = "/home/hal/.local/share/nvim/site/pack/packer/start/vim-bufferline",
-    url = "https://github.com/bling/vim-bufferline"
-  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/hal/.local/share/nvim/site/pack/packer/start/vim-fugitive",
