@@ -5,10 +5,6 @@ vim.g.mapleader = " "
 -- project view
 vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
 
--- save & quit
-vim.keymap.set("n", "<leader>w", ":w<CR>")
-vim.keymap.set("n", "<leader>q", ":q<CR>")
-
 -- vertical navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
@@ -23,12 +19,3 @@ vim.keymap.set("v", "ff", "<esc>")
 
 -- paste without overwritting buffer
 vim.keymap.set("x", "<leader>p", "\"_dP")
-
--- panes
-vim.keymap.set("n", "<leader>v", ":vsp<CR>")
-vim.keymap.set("n", "<leader>s", ":sp<CR>")
-
-vim.keymap.set("n", "<leader>h", "<C-w>h")
-vim.keymap.set("n", "<leader>j", "<C-w>j")
-vim.keymap.set("n", "<leader>k", "<C-w>k")
-vim.keymap.set("n", "<leader>l", "<C-w>l")
