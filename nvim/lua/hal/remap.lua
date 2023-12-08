@@ -5,6 +5,10 @@ vim.g.mapleader = " "
 -- project view
 vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
 
+-- save and exit
+vim.keymap.set("n", "<leader>w", ":w!<CR>")
+vim.keymap.set("n", "<leader>q", ":q!<CR>")
+
 -- vertical navigation
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
