@@ -12,6 +12,15 @@ return require('packer').startup(function(use)
       as = "gruvbox",
   })
 
+  use({
+      "neanias/everforest-nvim",
+      as = "everforest",
+      -- Optional; default configuration will be used if setup isn't called.
+      config = function()
+        require("everforest").setup()
+      end,
+  })
+
   use {
       'nvim-telescope/telescope.nvim', tag = '0.1.5',
       -- or                            , branch = '0.1.x',
