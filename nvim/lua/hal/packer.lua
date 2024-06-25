@@ -57,4 +57,10 @@ return require('packer').startup(function(use)
 
   use('chentoast/marks.nvim')
 
+  use('Decodetalkers/csharpls-extended-lsp.nvim')
+
+  if packer_bootstrap then
+      require('packer').sync()
+  end
+
 end)

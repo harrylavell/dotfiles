@@ -18,12 +18,22 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {},
+  ensure_installed = {"csharp_ls"},
   handlers = {
     lsp_zero.default_setup,
     lua_ls = function()
       local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
+      require("lspconfig").lua_ls.setup(lua_opts)
+    end,
+    ["csharp_ls"] = function ()
+        local lspconfig = require("lspconfig")
+        lspconfig.csharp_ls.setup {
+            handlers = {
+                ["textDocument/definition"] = require('csharpls_extended').handler,
+                ["textDocument/typeDefinition"] = require('csharpls_extended').handler,
+            },
+            cmd = { 'csharp-ls.exe' },
+        }
     end,
   }
 })
