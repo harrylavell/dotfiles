@@ -8,11 +8,10 @@ vim.opt.expandtab = true
 
 vim.opt.smartindent = true
 
-vim.opt.wrap = true
+vim.opt.wrap = false
 
 vim.opt.swapfile = true
 vim.opt.backup = false
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
 vim.opt.hlsearch = false
 vim.opt.incsearch = true
@@ -29,3 +28,12 @@ vim.opt.colorcolumn = "80,120"
 
 vim.opt.clipboard = "unnamedplus"
 vim.opt.guicursor = "n-v-c-sm:block,i-ci-ve:ver25,r-cr-o:hor20"
+
+-- OS Specific
+if (vim.fn.has('macunix') == 1) then
+    -- MacOS/Unix
+    vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+else
+    -- Windows
+    vim.opt.undodir = os.getenv("USERPROFILE") .. "/.vim/undodir"
+end
